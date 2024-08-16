@@ -27,7 +27,7 @@ class Tablet(DispositivoElectronico):
     def __init__(self, precioDcompra, modelo, memoria, megapixeles, pantalla, bateria):
         super().__init__("Tablet PHR", precioDcompra, modelo, memoria, megapixeles, pantalla, bateria)
 
-class Portatil(DispositivoElectronico):
+class laptop(DispositivoElectronico):
     def __init__(self, precioDcompra, modelo, memoria, pantalla, bateria):
         super().__init__("Portátil PHR", precioDcompra, modelo, memoria, None, pantalla, bateria)  # No tiene megapíxeles
 
@@ -72,7 +72,7 @@ def registrar_dispositivos():
             memoria = input("Ingresa la memoria del portátil: ")
             pantalla = input("Ingresa el tamaño de pantalla del portátil: ")
             bateria = input("Ingresa la capacidad de la batería del portátil: ")
-            portatil = Portatil(precioDcompra, modelo, memoria, pantalla, bateria)
+            laptop = laptop(precioDcompra, modelo, memoria, pantalla, bateria)
             dispositivos.append(portatil)
 
         elif opcion == '4':
